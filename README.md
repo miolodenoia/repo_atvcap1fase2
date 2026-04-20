@@ -91,7 +91,7 @@ Abaixo está a imagem do circuito montado na plataforma Wokwi:
 
 ## Código fonte
 
-O código completo do projeto está disponível nesse repositório.
+O código completo do projeto está disponível na pasta 'src' nesse repositório.
 
 ## Conclusão
 
