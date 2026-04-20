@@ -20,8 +20,8 @@ O sistema faz leituras contínuas dos sensores e interpreta os dados para simula
 
 ### Umidade do solo
 
-A umidade é obtida por meio do sensor DHT22  
-Valores abaixo de 50% indicam que o solo está seco
+- A umidade é obtida por meio do sensor DHT22  
+- Valores abaixo de 50% indicam que o solo está seco
 
 ### Nutrientes (N, P e K)
 
@@ -32,12 +32,10 @@ Os nutrientes são representados por botões:
 
 ### pH do solo
 
-O pH é simulado utilizando o sensor LDR 
-O valor analógico do sensor é convertido para uma escala de 0 a 14 no código
-
-A faixa considerada ideal está entre 5.5 e 7.5
-
-O pH não interfere diretamente na irrigação, ele serve apenas como um alerta para o usuário
+- O pH é simulado utilizando o sensor LDR 
+- O valor analógico do sensor é convertido para uma escala de 0 a 14 no código
+- A faixa considerada ideal está entre 5.5 e 7.5
+- O pH não interfere diretamente na irrigação, ele serve apenas como um alerta para o usuário
 
 ## Lógica de irrigação
 
@@ -48,11 +46,11 @@ A irrigação é acionada automaticamente quando as seguintes condições são a
 
 A lógica implementada é:
 
-if (soloSeco && nutrienteBaixo), a irrigação é ativada
+if (soloSeco && nutrienteBaixo): a irrigação é ativada.
 
 ## Alerta de pH
 
-Quando o pH está fora da faixa ideal (menor que 5.5 ou maior que 7.5), o sistema exibe uma mensagem de alerta no monitor serial: ">>> ATENÇÃO: pH fora da faixa ideal !!!"
+Quando o pH está fora da faixa ideal (menor que 5.5 ou maior que 7.5), o sistema exibe uma mensagem de alerta no monitor serial: ">>> ATENÇÃO: pH fora da faixa ideal !!!".
 
 ## Execução do sistema
 
@@ -63,7 +61,7 @@ O sistema opera em loop contínuo, realizando as seguintes etapas:
 3. Verificação das condições  
 4. Acionamento ou desligamento da irrigação  
 
-As leituras são atualizadas a cada 6 segundos
+As leituras são atualizadas a cada 6 segundos.
 
 ## Testes realizados
 
@@ -93,7 +91,7 @@ Abaixo está a imagem do circuito montado na plataforma Wokwi:
 
 ## Código fonte
 
-O código completo do projeto está disponível nesse repositório
+O código completo do projeto está disponível nesse repositório.
 
 ## Conclusão
 
