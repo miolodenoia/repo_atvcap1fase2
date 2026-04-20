@@ -13,7 +13,7 @@ int botaoK = 26;
 #define DHTTYPE DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
-// LDR simulando sensor de pH
+// LDR
 int ldrPin = 34;
 
 // relé
@@ -56,7 +56,7 @@ void loop() {
   Serial.print(umidade);
   Serial.println("%");
 
-  Serial.print("pH (simulado): ");
+  Serial.print("pH: ");
   Serial.println(ph);
 
   Serial.print("N: ");
@@ -70,24 +70,38 @@ void loop() {
 
   // LÓGICA
 
-  bool nutrienteBaixo = (N == LOW || P == LOW || K == LOW);
   bool soloSeco = (umidade < 50);
 
-  // definiçãoo de pH inadequado
-  bool phRuim = (ph < 5.5 || ph > 7.5);
+  // definição de pH inadequado
+  bool phRuim = (ph < 5.5, ph > 7.5);
 
-  // OBS: o pH não interfere na irrigação, apenas informa
+  // ALERTAS
+
+  // alerta de pH
   if (phRuim) {
     Serial.println(">>> ATENÇÃO: pH fora da faixa ideal !!!");
   }
 
-  // decisão de irrigação (baseada apenas em umidade e nutrientes)
-  if (soloSeco && nutrienteBaixo) {
+  // alertas individuais de nutrientes
+  if (N == LOW) {
+    Serial.println(">> ATENÇÃO: nível de Nitrogênio (N) baixo !!!");
+  }
+
+  if (P == LOW) {
+    Serial.println(">> ATENÇÃO: nível de Fósforo (P) baixo !!!");
+  }
+
+  if (K == LOW) {
+    Serial.println(">> ATENÇÃO: nível de Potássio (K) baixo !!!");
+  }
+
+  // decisão de irrigação (baseada na umidade do solo)
+  if (soloSeco) {
     digitalWrite(rele, HIGH);
-    Serial.println("> IRRIGAÇÃO LIGADA");
+    Serial.println("> IRRIGAÇÃO LIGADA (solo seco)");
   } else {
     digitalWrite(rele, LOW);
-    Serial.println("> IRRIGAÇÃO DESLIGADA");
+    Serial.println("> IRRIGAÇÃO DESLIGADA (umidade adequada)");
   }
 
   // para melhor visualização
