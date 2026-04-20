@@ -1,5 +1,3 @@
-# repo_atvcap1fase2
-
 # FarmTech Solutions – Sistema de Irrigação Inteligente
 
 ## Descrição do Projeto
