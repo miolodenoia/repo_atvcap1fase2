@@ -83,7 +83,7 @@ Por fim, o sistema foi retornado ao estado inicial, com pH dentro da faixa ideal
 
 ## Imagem do circuito
 
-Abaixo estão as imagens do circuito montado na plataforma Wokwi:
+Abaixo está a imagem do circuito montado na plataforma Wokwi:
 
 ![Circuito no Wokwi](https://github.com/miolodenoia/repo_atvcap1fase2/blob/main/imagem-circuito.png?raw=true)
 
