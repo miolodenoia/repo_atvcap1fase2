@@ -4,7 +4,7 @@
 
 O projeto foi desenvolvido como segunda etapa das atividades da FarmTech Solutions. O objetivo é simular um sistema de irrigação inteligente utilizando o microcontrolador ESP32 na plataforma Wokwi.
 
-O sistema monitora as condições do solo por meio de sensores simulados, que permitem a tomada de decisão automática sobre a irrigação (com base nas variáveis: umidade do solo, pH edo solo e níveis de nutrientes N, P e K no solo).
+O sistema monitora as condições do solo por meio de sensores simulados, que permitem a tomada de decisão automática sobre a irrigação (com base nas variáveis: umidade do solo, pH do solo e níveis de nutrientes N, P e K no solo).
 
 ## Componentes utilizados
 
